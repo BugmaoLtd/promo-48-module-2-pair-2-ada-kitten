@@ -2,6 +2,8 @@
 
 const addButton = document.querySelector(".js-btn-add");
 const form = document.querySelector(".js-new-form");
+const addButton = document.querySelector(".js-btn-add");
+const form = document.querySelector(".js-new-form");
 
 addButton.addEventListener("click", ()=> {
 form.classList.remove("collapsed");
