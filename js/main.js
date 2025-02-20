@@ -1,8 +1,13 @@
 "use strict";
 
-const button = document.querySelector("js-btn-add");
-const formDisplay = document.querySelector(".js-interaction-form");
+const addButton = document.querySelector(".js-btn-add");
+const form = document.querySelector(".js-new-form");
 
-button.addEventListener("click", () => {
-    formDisplay.classList.remove("collapsed");
-})
+addButton.addEventListener("click", ()=> {
+form.classList.remove("collapsed");
+});
+
+const cancelButton = document.querySelector(".js-btn-cancel");
+cancelButton.addEventListener("click", ()=> {
+form.classList.add("collapsed");
+});
