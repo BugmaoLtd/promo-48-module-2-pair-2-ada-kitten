@@ -24,25 +24,39 @@ searchButton.addEventListener("click", (ev) => {
     const cardone = document.querySelector(".js-catone")
     const cardtwo = document.querySelector(".js-cattwo")
     const cardthree = document.querySelector(".js-catthree")
+    const breedText = document.querySelector(".js_catbreed")
+    const notYourBreed = document.querySelector(".js_notyourbreed")
+    
   
     if (kittenDesc1.includes(descrSearchText)) {
+      cardone.classList.remove("hidden");
       cardtwo.classList.add("hidden");
       cardthree.classList.add("hidden");
-      cardone.classList.remove("hidden");
+      
     }
     
     if (kittenDesc2.includes(descrSearchText)) {
+      cardtwo.classList.remove("hidden");
       cardone.classList.add("hidden");
       cardthree.classList.add("hidden");
-      cardtwo.classList.remove("hidden");
+      
     }
     
     if (kittenDesc3.includes(descrSearchText)) {
+      cardthree.classList.remove("hidden");
       cardone.classList.add("hidden");
       cardtwo.classList.add("hidden");
-      cardthree.classList.remove("hidden");
+      
+    } 
+
+    if (breedText !== "card_race"){
+      notYourBreed.innerHTML = "Uy que despiste, no sabemos su raza"
     }
+
+    
   });
+
+
 
  
 
