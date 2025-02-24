@@ -34,6 +34,7 @@
     </header>
 
     <main>
+         <!-- Formulario oculto -->
         <section class="new-form collapsed js-new-form">
             <h2 class="title">¿Agregamos un nuevo gatito a Adalab?</h2>
             <form class="form" class="collapsed" class="js-new-form">
@@ -45,61 +46,33 @@
                 <button type="button" class="button-cancel js-btn-cancel">Cancelar</button>
             </form>
         </section>
+        <!-- Fin del formulario oculto -->
 
         <section class="about-us">
             <h1 class="title">AdaKitten</h1>
             <h2 class="subtitle">Los gatos más molones de Adalab</h2>
         </section>
 
+        <!-- Formulario filtrar y Buscar -->
         <section class="search">
             <h2 class="title">Filtrar / Buscar</h2>
             <form class="form">
                 <input class="input js_in_search_desc" type="text" placeholder="Descripción" />
-                <input class="input js_catbreed" type="select" name="raza" placeholder="Raza" id="raza" />
+                <input class="input js-search-breed" type="select" name="raza" placeholder="Raza" id="raza" />
 
-                <button type="submit" class="button js_button-search">Buscar</button>
+                <button class="button js_button-search" type="submit">Buscar</button>
             </form>
         </section>
+        <!-- Fin de formulario Filtrar y Buscar -->
 
-        <section class="data">
-            <ul class="list">
-                <li class="card js-catone">
-                    <article>
-                        <img class="card_img" src="https://dev.adalab.es/gato-siames.webp" alt="siames-cat" />
-                        <h3 class="card_title">Anastacio</h3>
-                        <h4 class="card_race">Siamés</h4>
-                        <p class="card_description">
-                            Porte elegante, su patrón de color tan característico y sus ojos
-                            de un azul intenso, pero su historia se remonta a Asía al menos
-                            hace 500 años, donde tuvo su origen muy posiblemente.
-                        </p>
-                    </article>
-                </li>
 
-                <li class="card js-cattwo">
-                    <img class="card_img" src="https://dev.adalab.es/sphynx-gato.webp" alt="sphynx-cat" />
-                    <h3 class="card_title">Fiona</h3>
-                    <h4 class="card_race">Sphynx</h4>
-                    <p class="card_description">
-                        Produce fascinación y curiosidad. Exótico, raro, bello, extraño…
-                        hasta con pinta de alienígena han llegado a definir a esta raza
-                        gatuna que se caracteriza por la «ausencia» de pelo.
-                    </p>
-                </li>
-                <li class="card js-catthree">
-                    <img class="card_img" src="https://dev.adalab.es/maine-coon-cat.webp" alt="maine-coon-cat" />
-                    <h3 class="card_title">Cielo</h3>
-                    <h4 class="card_race">Maine Coon</h4>
-                    <p class="card_description">
-                        Tienen la cabeza cuadrada y los ojos simétricos, por lo que su
-                        bella mirada se ha convertido en una de sus señas de identidad.
-                        Sus ojos son grandes y las orejas resultan largas y en punta.
-                    </p>
-                </li>
-            </ul>
-            <p class="js_notyourbreed"></p>
+        <!-- Listado de datos de gatitos -->
+        <section class="data js-list">
+            <ul class="list"></ul>
         </section>
+        <!-- Fin de listado de gatitos -->
     </main>
+
     <footer class="footer">
         <h3 class="subtittle">&copy; Adalab 2022</h3>
     </footer>
