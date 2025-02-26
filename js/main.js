@@ -36,18 +36,48 @@ kittenData.innerHTML = content;
 
 // Ejercicio 2.2
 
+/*
+
+*/
+
+const form = document.querySelector(".js-new-form");
+const addButton = document.querySelector(".js-btn-add");
+const cancelButton = document.querySelector(".js-btn-cancel");
+
+ function showNewCatForm() {
+  form.classList.remove("collapsed");
+}
+
+addButton.addEventListener("click",showNewCatForm);
+
+function hideNewCatForm() {
+  form.classList.add("collapsed");
+} 
+
+cancelButton.addEventListener("click",hideNewCatForm);
+
+function handleClickNewCatForm(event) {
+  if (formElement.classList.contains("collapsed")) {
+    console.log(EventTarget)
+    form.classList.remove("collapsed");
+  } else { 
+    form.classList.add("collapsed");
+  }
+}
+
+addButton.addEventListener("click",handleClickNewCatForm)
+
+
 const addButton = document.querySelector(".js-btn-add");
 addButton.addEventListener("click", ()=> {
-  const form = document.querySelector(".js-new-form");
   form.classList.remove("collapsed");
 });
 
 const cancelButton = document.querySelector(".js-btn-cancel");
 cancelButton.addEventListener("click", ()=> {
-  const form = document.querySelector(".js-new-form");
   form.classList.add("collapsed");
 });
-
+*/
 
 // Ejercicio 2.3
 
@@ -115,10 +145,6 @@ if (kittenRace1 === "") {
 // const kittenName3 = "Cielo";
 // const kittenRace3 = "Maine Coon";
 // const kittenDesc3 = "Tienen la cabeza cuadrada y los ojos simétricos, por lo que su bella mirada se ha convertido en una de sus señas de identidad. Sus ojos son grandes y las orejas resultan largas y en punta.";
-
-
-
-
 
 
 
