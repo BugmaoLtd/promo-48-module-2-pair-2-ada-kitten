@@ -53,50 +53,81 @@ cancelButton.addEventListener("click", ()=> {
 
 const searchButton = document.querySelector(".js_button-search");
 const descrInputText = document.querySelector(".js_in_search_desc");
+const kittenDesc1 = "Porte elegante, su patrón de color tan característico y sus ojos de un azul intenso, pero su historia se remonta a Asía al menos hace 500 años, donde tuvo su origen muy posiblemente.";
+const kittenDesc2 = "Produce fascinación y curiosidad. Exótico, raro, bello, extraño…  hasta con pinta de alienígena han llegado a definir a esta raza gatuna que se caracteriza por la «ausencia» de pelo.";
+const kittenDesc3 = "Tienen la cabeza cuadrada y los ojos simétricos, por lo que su bella mirada se ha convertido en una de sus señas de identidad. Sus ojos son grandes y las orejas resultan largas y en punta.";
+const catone = document.querySelector(".js-catone");
+const cattwo = document.querySelector(".js-cattwo");
+const catthree = document.querySelector(".js-catthree");
 
 
-searchButton.addEventListener("click", () => {
-  ev.preventDefault();
+const filterKitten = (event) => {
+  event.preventDefault();
   const descrSearchText = descrInputText.value; 
-  const kittenDesc1 = "Porte elegante, su patrón de color tan característico y sus ojos de un azul intenso, pero su historia se remonta a Asía al menos hace 500 años, donde tuvo su origen muy posiblemente.";
-  const kittenDesc2 = "Produce fascinación y curiosidad. Exótico, raro, bello, extraño…  hasta con pinta de alienígena han llegado a definir a esta raza gatuna que se caracteriza por la «ausencia» de pelo.";
-  const kittenDesc3 = "Tienen la cabeza cuadrada y los ojos simétricos, por lo que su bella mirada se ha convertido en una de sus señas de identidad. Sus ojos son grandes y las orejas resultan largas y en punta.";
-  const catone = document.querySelector("js-catone")
-  const cattwo = document.querySelector("js-cattwo")
-  const catthree = document.querySelector("js-catthree")
-
-if (kittenDesc1.includes(descrSearchText)) {
-  catone.classList.remove("hidden");
-  cattwo.classList.add("hidden");
-  catthree.classList.add("hidden");
-      
+  if (kittenDesc1.includes(descrSearchText)) {
+    console.log(event)
+    catone.classList.remove("hidden")
+    cattwo.classList.add("hidden");
+    catthree.classList.add("hidden");
+  
   }
-    
-if (kittenDesc2.includes(descrSearchText)) {
-   cattwo.classList.remove("hidden");
-   catone.classList.add("hidden");
-   catthree.classList.add("hidden");
-      
-   }
-    
-if (kittenDesc3.includes(descrSearchText)) {
-   catthree.classList.remove("hidden");
-   catone.classList.add("hidden");
-   cattwo.classList.add("hidden");
-      
+  if (kittenDesc2.includes(descrSearchText)) {
+    cattwo.classList.remove("hidden")
+    catone.classList.add("hidden");
+    catthree.classList.add("hidden");
   }
-})
+  if (kittenDesc3.includes(descrSearchText)) {
+    catthree.classList.remove("hidden")
+    cattwo.classList.add("hidden");
+    catone.classList.add("hidden");
+  }
+};
+ 
+searchButton.addEventListener("click", filterKitten)
+
+// => {
+//   ev.preventDefault();
+  
+//   const kittenDesc1 = "Porte elegante, su patrón de color tan característico y sus ojos de un azul intenso, pero su historia se remonta a Asía al menos hace 500 años, donde tuvo su origen muy posiblemente.";
+//   const kittenDesc2 = "Produce fascinación y curiosidad. Exótico, raro, bello, extraño…  hasta con pinta de alienígena han llegado a definir a esta raza gatuna que se caracteriza por la «ausencia» de pelo.";
+//   const kittenDesc3 = "Tienen la cabeza cuadrada y los ojos simétricos, por lo que su bella mirada se ha convertido en una de sus señas de identidad. Sus ojos son grandes y las orejas resultan largas y en punta.";
+//   // 
+
+// if (kittenDesc1.includes(descrSearchText)) {
+//   catone.classList.remove("hidden");
+//   cattwo.classList.add("hidden");
+//   catthree.classList.add("hidden");
+      
+//   }
+    
+// if (kittenDesc2.includes(descrSearchText)) {
+//    cattwo.classList.remove("hidden");
+//    catone.classList.add("hidden");
+//    catthree.classList.add("hidden");
+      
+//    }
+    
+// if (kittenDesc3.includes(descrSearchText)) {
+//    catthree.classList.remove("hidden");
+//    catone.classList.add("hidden");
+//    cattwo.classList.add("hidden");
+      
+//   }
+// })
 
 
 
-// Bonus ejercicio 2.3
+// // Bonus ejercicio 2.3
 
-let breedText = "";
-if (kittenRace1 === "") {
-  breedText = `Uy que despiste, no sabemos su raza`;
-  } else {
-  breedText = kittenRace1;
-}
+// let breedText = "";
+// if (kittenRace1 === "") {
+//    breedText = `Uy que despiste, no sabemos su raza`;
+//   } else {
+//   breedText = kittenRace1;
+// }
+
+
+
 
   
   
