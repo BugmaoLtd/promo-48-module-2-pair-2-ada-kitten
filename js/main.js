@@ -57,7 +57,7 @@ addButton.addEventListener("click",handleClickNewCatForm)
 
 // Ejercicio 2.3
 
-const searchButton = document.querySelector(".js_button-search");
+/*const searchButton = document.querySelector(".js_button-search");
 const descrInputText = document.querySelector(".js_in_search_desc");
 const kittenDesc1 = "Porte elegante, su patrón de color tan característico y sus ojos de un azul intenso, pero su historia se remonta a Asía al menos hace 500 años, donde tuvo su origen muy posiblemente.";
 const kittenDesc2 = "Produce fascinación y curiosidad. Exótico, raro, bello, extraño…  hasta con pinta de alienígena han llegado a definir a esta raza gatuna que se caracteriza por la «ausencia» de pelo.";
@@ -92,11 +92,8 @@ const filterKitten = (event) => {
     catthree.classList.remove("hidden");
   }
 };
- 
-searchButton.addEventListener("click", filterKitten)
 
-
-
+searchButton.addEventListener("click", filterKitten) */
 
 
 // // Bonus ejercicio 2.3
@@ -151,18 +148,15 @@ searchButton.addEventListener("click", filterKitten)
  const kittenName2 = "Fiona";
  const kittenRace2 = "Sphynx";
  const kittenDesc2 = "Produce fascinación y curiosidad. Exótico, raro, bello, extraño…  hasta con pinta de alienígena han llegado a definir a esta raza gatuna que se caracteriza por la «ausencia» de pelo.";
+ 
 
  const kittenImage3 = "https://dev.adalab.es/maine-coon-cat.webp";
  const kittenName3 = "Cielo";
  const kittenRace3 = "Maine Coon";
  const kittenDesc3 = "Tienen la cabeza cuadrada y los ojos simétricos, por lo que su bella mirada se ha convertido en una de sus señas de identidad. Sus ojos son grandes y las orejas resultan largas y en punta.";
 
-function renderKitten(url, desc, name, race) {
-  //completa el 
-  const KittenData1 = {
 
-  }
-}
+  // Ejercicio 2.
 const kittenData1 = {
   image: "https://dev.adalab.es/gato-siames.webp",
   name: "Anastacio",
@@ -184,6 +178,19 @@ const kittenData3 = {
  desc: "Tienen la cabeza cuadrada y los ojos simétricos, por lo que su bella mirada se ha convertido en una de sus señas de identidad. Sus ojos son grandes y las orejas resultan largas y en punta.",
 };
 
-function renderKitten(kittenData) {
-  
+const kittenDataList = [kittenData1, kittenData2, kittenData3];
+
+console.log(kittenDataList[2].race)
+
+function renderKitten(kittenDataList) {
+ return `<li class="card js-catone">
+<article>
+    <img class="card_img" src="${kittenDataList[0].image}" alt="siames-cat" />
+    <h3 class="card_title">${kittenDataList[0].name}</h3>
+    <h4 class="card_race js_catbreed">${kittenDataList[0].race}</h4>
+    <p class="card_description">${kittenDataList[0].desc}
+    </p>
+</article>
+</li>`;
 }
+
